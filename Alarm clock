@@ -1,0 +1,19 @@
+import datetime
+import time
+
+def alarm_clock(alarm_time):
+    while True:
+        # Get current time
+        current_time = datetime.datetime.now().time()
+        
+        # Compare current time with alarm time
+        if current_time == alarm_time:
+            print("Wake up! It's", alarm_time)
+            return
+        
+        # Wait for 1 second
+        time.sleep(1)
+
+# Example usage
+alarm_time = datetime.time(hour=8, minute=30)
+alarm_clock(alarm_time)
